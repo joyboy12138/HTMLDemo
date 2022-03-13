@@ -1,0 +1,72 @@
+body {
+  font-size: 10px; /*设置基准*/
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif; /*设置字体样式*/
+  line-height: 1.5;
+}
+#wrapper {
+  background-color: #eeeeee;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header"
+    "img"
+    "career"
+    "footer";
+}
+.header {
+  justify-self: center;
+  grid-area: header;
+  font-size: 2.5rem;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+#p1 {
+  font-size: 15px;
+}
+@media (max-width: 600px) {
+  .header {
+    justify-self: center;
+    grid-area: header;
+    font-size: 3rem;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+figcaption {
+  text-align: center;
+  font-size: 1rem;
+}
+figure {
+  background-color: white;
+  grid-area: img;
+  margin: 0;
+  padding: 10px;
+  width: fit-content;
+  justify-self: center;
+}
+ul {
+  grid-area: career;
+  max-width: 550px;
+  font-size: 1rem;
+  margin: 10px auto;
+  line-height: 2.5rem;
+}
+li {
+  justify-self: center;
+}
+.footer {
+  grid-area: footer;
+  justify-self: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.footer > p {
+  display: inline-block;
+}
